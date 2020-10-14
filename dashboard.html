@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 
+      <title>Social Stat</title>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="bg-image">
+	<nav class="navbar navbar-inverse">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+		 
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		 
+		  <ul class="nav navbar-nav navbar-right">
+			
+			<li ><a href="index.html">Home</a></li>
+			<li class="active"><a href="#">Platforms</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+	  
+	<div class="container-fluid text-center">    
+	  <div class="row content">
+		<div class="col-sm-2 sidenav">
+			<P><img src="img/finallogo.png" height="50%" width="50%"></P><br>
+			<p>Select Your Platform</p>
+		  <p><button onclick="myFunction()" class="btn facebook"><i class="fab fa-facebook text-light fa-lg mr-3"></i>&nbsp;&nbsp;Facebook</button></p>
+		  <p><button onclick="location.href='dashboard.html'"  class="btn youtube"><i class="fa fa-youtube-play text-light fa-lg mr-3"></i>&nbsp;&nbsp;YouTube</button></p>
+		  <p><button onclick="myFunction()"class="btn twitter"><i class="fab fa-twitter-square text-light fa-lg mr-3"></i>&nbsp;&nbsp;Twitter</button> </p>
+		</div>        
+		<div class="col-sm-10 text-left"> 
+			<div class="row">
+				<div class="col-sm-12" >
+					<center><h3> <i class="fa fa-youtube-play text-light fa-lg mr-3"style="color:#af0404;"></i>&nbsp;&nbsp;YouTube</h3>
+						<h6> Enter the channel name below to get statistics </h6>
+					<br><br>
+					
+					<form method="get" action=""  >
+						<div class="input-group">
+							
+							<input id="search" type="search" class="form-control search-input"  placeholder="Enter The Channel Name Here...!">
+							<button id="submit" type="submit" class="btn btn-white search-button"><i class="fas fa-search text-danger"></i></button>
+						</div>
+					</form></center>
+				</div>
+				
+			  </div>
+
+			  <div class="row">
+				<div class="col-sm-12" >
+					<h3> <i class="fa fa-tachometer " aria-hidden="true" style="color:#0bff2c4f;"></i>&nbsp;&nbsp;Dashboard</h3>
+					 
+					<br>
+					
+					<table class="table table-bordered" style="background-color: rgba(63, 63, 62, 0.39);" >
+						<thead>
+						  <tr style="height: 125px;">
+							<th><h4><img class="z-depth-4" id="thumbnail"> <b>&nbsp;&nbsp; Channel Icon</b></h4></th>
+							<th><h4><i class="fas fa-tv fa-2x" style="color:#a8a8a8;"></i><b>&nbsp;&nbsp; Channel Name</b></h4>
+								<h5 class="center-align" id="title" style=" color: white; font-style: bold;"></h5></th>
+							
+						  </tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="2"><h4><i class="fa fa-id-card-o fa-2x" aria-hidden="true" style="color:#bdb677;"></i><b>&nbsp;&nbsp;Channel Description</b></h4>
+									<h5 class="center-align" id="desc" style=" color: white; font-style: bold;"></h5></td>
+								
+								
+							  </tr>
+						  <tr>
+							<td><h4><i class="fas fa-users fa-2x" style="color:#0f4c75;"></i><b>&nbsp;&nbsp;Subscriber Count</b></h4>
+								<h5 class="center-align" id="subscribers" style=" color: white; font-style: bold;"></h5></td>
+							<td><h4><i class="fas fa-chart-line fa-2x" style="color:#af0404;"></i><b>&nbsp;&nbsp;Total Video Views</b></h4>
+								<h5 class="center-align" id="totalViews" style=" color: white; font-style: bold;"></h5></td>
+							
+						  </tr>
+						  <tr>
+							<td><h4> <i class="fa fa-caret-square-o-right fa-2x" aria-hidden="true" style="color:#945b54;"></i><b>&nbsp;&nbsp; Total Uploads (On Youtube)</b></h4>
+								<h5 class="center-align" id="totalVideos" style=" color: white; font-style: bold;" ></h5></td>
+							<td><h4><i class="fa fa-globe fa-2x" aria-hidden="true" style="color:#1c5724;"></i><b>&nbsp;&nbsp;Country</b></h4>
+								<h5 class="center-align" id="countr" style=" color: white; font-style: bold;"></h5></td>
+							
+						  </tr>
+						  <tr>
+							<td colspan="2"><h4><i class="fa fa-calendar  fa-2x" aria-hidden="true" style="color:#574b39;"></i><b>&nbsp;&nbsp;Published Date</b></h4>
+								<h5 class="center-align" id="pubdate" style=" color: white;"></h5>
+							
+							
+						  </tr>
+						</tbody>
+					  </table>
+
+					  <p><button id="thistry" class="btn facebook" style="width: 250px; background-color: #af0404; color: wheat;" disabled>&nbsp;&nbsp;Visit Channel</button> 
+						<button id="disp" class="btn facebook"  style="width: 250px; background-color: #007c47; color: wheat;"disabled>&nbsp;&nbsp;Show Latest Videos</button></p>
+					  <div class="row" id="results"></div>
+				</div>
+				
+			  </div>
+		
+		</div>
+		
+	  </div>
+	</div>
+	
+	
+	
+	
+	</div>
+
+  	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	
+	  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	
+	  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	
+	  <script src="https://kit.fontawesome.com/fb793bf316.js" crossorigin="anonymous"></script>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Compiled and minified JavaScript -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+	<script src="js/script.js"></script>
+</body>
+  	

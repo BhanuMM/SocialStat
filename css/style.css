@@ -1,0 +1,104 @@
+body{
+	font-family: 'Arial',sans-seriff;
+	color: white;
+	
+}
+.bg-image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/fgh.jpg");
+	height: 100%;
+	
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;}
+ 
+ /* Remove the navbar's default margin-bottom and rounded borders */ 
+ .navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+  }
+  
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+	padding-top: 20px;
+	background-color: rgba(241, 229, 229, 0.055);
+	height: 900px;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+	.sidenav {
+	  height: auto;
+	  padding: 15px;
+	}
+	.row.content {height:auto;} 
+  }
+
+  .btn {
+	border-radius: 20px;
+	border: none;
+	color: white;
+	padding: 10px 8px;
+	font-size: 12px;
+	cursor: pointer;
+	
+  }
+  
+  
+
+  .facebook {background-color: #2196F3;
+  width: 150px;} 
+  .facebook:hover {background: #0b7dda;}
+  
+  .twitter {background-color:  #1c2d59;
+	width: 150px;} 
+  .twitter:hover {background: #162447;}
+  
+  .youtube {background-color: #f44336;
+	width: 150px;} 
+  .youtube:hover {background: #da190b;}
+
+  /*search*/
+  #searchbar input[type=text]{width:550px !important;}
+#search{
+	/*background-color:#fff;*/
+	width:450px;
+	padding:20px;
+	font-size: 15px;
+	margin:auto;
+}
+ .search-input{
+ 	background: transparent;
+ 	border: none;
+ 	border-radius: 0;
+ 	border-bottom: 2px solid #999;
+ 	transition: all 0.4s;
+ }
+
+.search-input:focus {
+	background: transparent;
+	box-shadow: none;
+	border-bottom: 2px solid #84142d;
+}
+
+.search-button{
+	margin-left: 5px;
+	border-radius: 40%;
+	padding: 13px 18px;
+	transition: all .4s;
+}
+
+.search-button:hover {
+    background-color: #eee;
+    transform: translateY(-1px);
+}
